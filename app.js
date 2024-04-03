@@ -6,14 +6,11 @@ import {
   ref,
   get,
   child,
-  onValue,
 } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
 
 const temp = document.getElementById("temperature");
 const humidity = document.getElementById("humidity");
-const sound = document.getElementById("sound");
-console.log("🚀 ~ temp:", temp);
-console.log("🚀 ~ humidity:", humidity);
+const sound = document.getElementById("light");
 
 const ctx = document.getElementById("myChart").getContext("2d");
 const circularProgress = document.querySelectorAll(".circular-progress");

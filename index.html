@@ -30,8 +30,16 @@
           <div class="title">
             <h1 class="text">KHOA ĐIỆN TỬ & KĨ THUẬT MÁY TÍNH</h1>
           </div>
-          <div class="banner">
-            <img class="banner" src="./img/logo.jpg" alt="" />
+          <div class="images">
+            <div class="background">
+              <img src="./img/image1.jpg.crdownload" alt="" />
+            </div>
+            <div class="banner">
+              <img class="banner" src="./img/logo.jpg" alt="" />
+            </div>
+            <div class="background">
+              <img src="./img/image2.jpg" alt="" />
+            </div>
           </div>
         </header>
         <main class="main">
@@ -74,7 +82,7 @@
                       </div>
                       <div class="d-flex flex-column text-center mt-5 mb-4">
                         <h6
-                          id="temperature"
+                          id="humidity"
                           class="display-4 mb-0 font-weight-bold"
                           style="color: #1c2331"
                         >
@@ -100,7 +108,7 @@
                       </div>
                       <div class="d-flex flex-column text-center mt-5 mb-4">
                         <h6
-                          id="temperature"
+                          id="light"
                           class="display-4 mb-0 font-weight-bold"
                           style="color: #1c2331"
                         >
@@ -114,8 +122,19 @@
             </div>
           </section>
         </main>
-        <div class="chart">
-          <canvas id="myChart"></canvas>
+        <div class="row wrapper">
+          <div class="chart col-xs-4 col-md-12">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <div class="led">
+          <div class="led_btn">
+            <p class="text">Bật/Tắt led:</p>
+            <input type="checkbox" id="switch" /><label for="switch"
+              >Toggle</label
+            >
+          </div>
+          <img src="./img/led_off.svg" alt="" />
         </div>
       </div>
     </div>

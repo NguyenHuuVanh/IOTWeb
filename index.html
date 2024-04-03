@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/bf483bebf6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="wrapper container-fluid col-xs-6 col-md-12">
+        <div class="logo"><img class="img" src="./img/uneti.jpg" alt="" /></div>
+        <header class="header">
+          <div class="title">
+            <h1 class="text">KHOA ĐIỆN TỬ & KĨ THUẬT MÁY TÍNH</h1>
+          </div>
+          <div class="banner">
+            <img class="banner" src="./img/logo.jpg" alt="" />
+          </div>
+        </header>
+        <main class="main">
+          <section class="wrapper" style="background-color: tranparent">
+            <div class="container h-100">
+              <div
+                class="row d-flex justify-content-center align-items-center h-100"
+              >
+                <div class="col-md-12 col-lg-6 col-xl-12">
+                  <div class="card" style="color: #4b515d; border-radius: 35px">
+                    <div class="card-body p-4">
+                      <div class="d-flex text-center">
+                        <h6 class="flex-grow-1">Nhiệt độ</h6>
+                      </div>
+                      <div class="d-flex flex-column text-center mt-5 mb-4">
+                        <h6
+                          id="temperature"
+                          class="display-4 mb-0 font-weight-bold"
+                          style="color: #1c2331"
+                        >
+                          13°C
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="wrapper" style="background-color: tranparent">
+            <div class="container py-5 h-100">
+              <div
+                class="row d-flex justify-content-center align-items-center h-100"
+              >
+                <div class="col-md-12 col-lg-6 col-xl-12">
+                  <div class="card" style="color: #4b515d; border-radius: 35px">
+                    <div class="card-body p-4">
+                      <div class="d-flex text-center">
+                        <h6 class="flex-grow-1">Độ ẩm</h6>
+                      </div>
+                      <div class="d-flex flex-column text-center mt-5 mb-4">
+                        <h6
+                          id="temperature"
+                          class="display-4 mb-0 font-weight-bold"
+                          style="color: #1c2331"
+                        >
+                          100%
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="wrapper" style="background-color: tranparent">
+            <div class="container py-5 h-100">
+              <div
+                class="row d-flex justify-content-center align-items-center h-100"
+              >
+                <div class="col-md-12 col-lg-6 col-xl-12">
+                  <div class="card" style="color: #4b515d; border-radius: 35px">
+                    <div class="card-body p-4">
+                      <div class="d-flex text-center">
+                        <h6 class="flex-grow-1">Ánh sáng</h6>
+                      </div>
+                      <div class="d-flex flex-column text-center mt-5 mb-4">
+                        <h6
+                          id="temperature"
+                          class="display-4 mb-0 font-weight-bold"
+                          style="color: #1c2331"
+                        >
+                          Đỏ
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <div class="chart">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

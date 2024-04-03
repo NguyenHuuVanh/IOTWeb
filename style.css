@@ -1,0 +1,150 @@
+:root {
+  --progress-bar-width: 200px;
+  --progress-bar-height: 200px;
+  --font-size: 32px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.banner {
+  width: 100px;
+  height: 100px;
+  animation: spin 10s linear infinite;
+}
+
+img.banner {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: green;
+}
+
+.text {
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.vh-100 {
+  width: 100%;
+  margin-bottom: 62px;
+}
+
+.chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  padding: 8px;
+}
+
+#myChart {
+  width: 100%;
+  height: 100%;
+}
+
+.circular-progress {
+  width: var(--progress-bar-width);
+  height: var(--progress-bar-height);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s linear;
+}
+.inner-circle {
+  position: absolute;
+  width: calc(var(--progress-bar-width) - 50px);
+  height: calc(var(--progress-bar-height) - 50px);
+  border-radius: 50%;
+  background-color: lightgrey;
+}
+
+.percentage {
+  position: relative;
+  font-size: var(--font-size);
+  color: #fff;
+  font-weight: 600;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-2deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Bắt đầu từ góc 0 độ */
+  }
+  100% {
+    transform: rotate(360deg); /* Quay một vòng đầy đủ, tương ứng với 360 độ */
+  }
+}

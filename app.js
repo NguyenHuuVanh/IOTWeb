@@ -11,6 +11,8 @@ import {
 const temp = document.getElementById("temperature");
 const humidity = document.getElementById("humidity");
 const sound = document.getElementById("light");
+const switchBtn = document.getElementById("switch");
+console.log("🚀 ~ switchBtn:", switchBtn);
 
 const ctx = document.getElementById("myChart").getContext("2d");
 const circularProgress = document.querySelectorAll(".circular-progress");
@@ -81,70 +83,94 @@ getTime();
 
 getData();
 
+// const myChart = new Chart(ctx, {
+//   type: "bar",
+//   data: {
+//     labels: ["Nhiệt độ", "độ ẩm", "cường độ ánh sáng"],
+//     datasets: [
+//       {
+//         label: "Biểu đồ",
+//         data: [30, 100, 100],
+//         backgroundColor: [
+//           "rgba(255, 99, 132, 0.2)",
+//           "rgba(255, 159, 64, 0.2)",
+//           "rgba(75, 192, 192, 0.2)",
+//           "rgba(54, 162, 235, 0.2)",
+//           "rgba(153, 102, 255, 0.2)",
+//           "rgba(201, 203, 207, 0.2)",
+//         ],
+//         borderColor: [
+//           "rgb(255, 99, 132)",
+//           "rgb(255, 159, 64)",
+//           "rgb(255, 205, 86)",
+//           "rgb(75, 192, 192)",
+//           "rgb(54, 162, 235)",
+//           "rgb(153, 102, 255)",
+//           "rgb(201, 203, 207)",
+//         ],
+//         borderWidth: 10,
+//         borderRadius: 4,
+//         hoverBackgroundColor: "#eee",
+//       },
+//     ],
+//   },
+//   options: {
+//     scales: {
+//       y: {
+//         beginAtZero: true,
+//       },
+//     },
+//     layout: {
+//       padding: 20,
+//     },
+//     Plugins: {
+//       tooltip: {
+//         enabled: true,
+//         Align: "top",
+//         titleAlign: "center",
+//         callbacks: {
+//           label: (tooltipItem, value) => {
+//             var label = myChart.data.labels[tooltipItem.dataIndex];
+//             var value =
+//               myChart.data.datasets[tooltipItem.dataIndex].data[
+//                 tooltipItem.dataIndex
+//               ];
+//             return "Giá trị:" + value;
+//           },
+//         },
+//       },
+//       legend: {
+//         display: true,
+//       },
+//       colors: {
+//         forceOverride: true,
+//       },
+//     },
+//   },
+// });
+
 const myChart = new Chart(ctx, {
   type: "bar",
   data: {
-    labels: ["Nhiệt độ", "độ ẩm", "cường độ ánh sáng"],
     datasets: [
       {
-        label: "Biểu đồ",
-        data: values,
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(255, 159, 64, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-          "rgba(201, 203, 207, 0.2)",
-        ],
-        borderColor: [
-          "rgb(255, 99, 132)",
-          "rgb(255, 159, 64)",
-          "rgb(255, 205, 86)",
-          "rgb(75, 192, 192)",
-          "rgb(54, 162, 235)",
-          "rgb(153, 102, 255)",
-          "rgb(201, 203, 207)",
-        ],
-        borderWidth: 10,
-        borderRadius: 4,
-        hoverBackgroundColor: "#eee",
+        label: "Line Dataset",
+        data: [10, 10, 30, 40, 50, 10, 20, 30, 20, 30, 40],
+        // this dataset is drawn below
+        type: "line",
+        order: 2,
+      },
+      {
+        label: "Line Dataset",
+        data: [10, 40, 10, 10, 20, 30, 90, 80, 20, 10, 11],
+        type: "line",
+        // this dataset is drawn on top
+        order: 1,
       },
     ],
+    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
   },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-    layout: {
-      padding: 20,
-    },
-    Plugins: {
-      tooltip: {
-        enabled: true,
-        Align: "top",
-        titleAlign: "center",
-        callbacks: {
-          label: (tooltipItem, value) => {
-            var label = myChart.data.labels[tooltipItem.dataIndex];
-            var value =
-              myChart.data.datasets[tooltipItem.dataIndex].data[
-                tooltipItem.dataIndex
-              ];
-            return "Giá trị:" + value;
-          },
-        },
-      },
-      legend: {
-        display: true,
-      },
-      colors: {
-        forceOverride: true,
-      },
-    },
-  },
+  // options: options,
 });
 
 Array.from(circularProgress).forEach((progressBar) => {

@@ -24,7 +24,7 @@ Chart.defaults.color = "#000";
 const firebaseConfig = {
   apiKey: "AIzaSyCXucNeRTSLENJ4cRyjtNHmwiYy93KVpew",
   authDomain: "test-9fdaf.firebaseapp.com",
-  databaseURL: "https://test-9fdaf-default-rtdb.firebaseio.com",
+  databaseURL: "https://test-9fdaf-default-rtdb.firebaseio.com", 
   projectId: "test-9fdaf",
   storageBucket: "test-9fdaf.appspot.com",
   messagingSenderId: "2889081671",
@@ -154,21 +154,21 @@ const myChart = new Chart(ctx, {
   data: {
     datasets: [
       {
-        label: "Line Dataset",
+        label: "Độ ẩm",
         data: [10, 10, 30, 40, 50, 10, 20, 30, 20, 30, 40],
         // this dataset is drawn below
-        type: "line",
+        type: "bar",
         order: 2,
       },
       {
-        label: "Line Dataset",
+        label: "Nhiệt độ",
         data: [10, 40, 10, 10, 20, 30, 90, 80, 20, 10, 11],
         type: "line",
         // this dataset is drawn on top
         order: 1,
       },
     ],
-    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    labels: ["0H", "1H", "2H", "3H", "4H", "5H", "6H", "7H", "8H", "9H", "10H","11H","12H","13H","14H","15H","16H","17H","18H","19H","20H","21H","22H","23H"],
   },
   // options: options,
 });

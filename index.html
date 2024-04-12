@@ -28,108 +28,52 @@
         <div class="logo"><img class="img" src="./img/uneti.jpg" alt="" /></div>
         <header class="header">
           <div class="title">
-            <h1 class="text">KHOA ĐIỆN TỬ & KĨ THUẬT MÁY TÍNH</h1>
-          </div>
-          <div class="images">
-            <div class="background">
-              <img src="./img/image1.jpg" alt="" />
-            </div>
             <div class="banner">
               <img class="img banner" src="./img/logo.jpg" alt="" />
             </div>
+            <div class="text_header">
+              <h1 class="text">KHOA ĐIỆN TỬ & KĨ THUẬT MÁY TÍNH</h1>
+              <h2 class="text">Phần mềm giám sát</h2>
+            </div>
+          </div>
+          <!-- <div class="images">
+          
+            <div class="background">
+              <img src="./img/image1.jpg" alt="" />
+            </div>
+
             <div class="background">
               <img src="./img/image2.jpg" alt="" />
             </div>
-          </div>
+          </div> -->
         </header>
         <main class="main">
-          <section class="wrapper" style="background-color: tranparent">
-            <div class="container h-100">
-              <div
-                class="row d-flex justify-content-center align-items-center h-100"
-              >
-                <div class="col-md-12 col-lg-6 col-xl-12">
-                  <div class="card" style="color: #4b515d; border-radius: 35px">
-                    <div class="card-body p-4">
-                      <div class="d-flex text-center">
-                        <h6 class="flex-grow-1">Nhiệt độ</h6>
-                      </div>
-                      <div class="d-flex flex-column text-center mt-5 mb-4">
-                        <h6
-                          id="temperature"
-                          class="display-4 mb-0 font-weight-bold"
-                          style="color: #1c2331"
-                        >
-                          13°C
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="main_info">
+            <div>
+              <div class="card">
+                <h2>Nhiệt độ</h2>
+                <p id="humidity"></p>
+                        </div>
             </div>
-          </section>
-          <section class="wrapper" style="background-color: tranparent">
-            <div class="container py-5 h-100">
-              <div
-                class="row d-flex justify-content-center align-items-center h-100"
-              >
-                <div class="col-md-12 col-lg-6 col-xl-12">
-                  <div class="card" style="color: #4b515d; border-radius: 35px">
-                    <div class="card-body p-4">
-                      <div class="d-flex text-center">
-                        <h6 class="flex-grow-1">Độ ẩm</h6>
-                      </div>
-                      <div class="d-flex flex-column text-center mt-5 mb-4">
-                        <h6
-                          id="humidity"
-                          class="display-4 mb-0 font-weight-bold"
-                          style="color: #1c2331"
-                        >
-                          100%
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="wrapper" style="background-color: tranparent">
-            <div class="container py-5 h-100">
-              <div
-                class="row d-flex justify-content-center align-items-center h-100"
-              >
-                <div class="col-md-12 col-lg-6 col-xl-12">
-                  <div class="card" style="color: #4b515d; border-radius: 35px">
-                    <div class="card-body p-4">
-                      <div class="d-flex text-center">
-                        <h6 class="flex-grow-1">Ánh sáng</h6>
-                      </div>
-                      <div class="d-flex flex-column text-center mt-5 mb-4">
-                        <h6
-                          id="light"
-                          class="display-4 mb-0 font-weight-bold"
-                          style="color: #1c2331"
-                        >
-                          Đỏ
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-        <div class="row wrapper">
-          <div class="chart col-xs-4 col-md-12">
-            <canvas id="myChart"></canvas>
-          </div>
+          <div class="card">
+            <h2>Độ ẩm</h2>
+            <p id="temperature"></p>
         </div>
+        <div class="card">
+          <h2>Cường độ âm thanh</h2>
+          <p id="light"></p>
+      </div>
+          </div>
+          <div class="row wrapper_chart">
+            <div class="chart col-xs-4 col-md-8">
+              <canvas id="myChart" width="100%"></canvas>
+            </div>
+          </div>
+        </main>
+      
         <div class="led">
           <div class="led_btn">
-            <p class="text">Bật/Tắt led:</p>
+            <p class="text">Trạng thái led:</p>
             <input type="checkbox" id="switch" /><label id="switch" for="switch"
               >Toggle</label
             >
